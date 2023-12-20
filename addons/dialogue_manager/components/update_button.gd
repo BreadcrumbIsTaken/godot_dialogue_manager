@@ -3,7 +3,7 @@ extends Button
 
 const DialogueConstants = preload("../constants.gd")
 
-const REMOTE_RELEASES_URL = "https://api.github.com/repos/nathanhoad/godot_dialogue_manager/releases"
+const REMOTE_RELEASES_URL = "https://api.github.com/repos/breadcrumbistaken/godot_dialogue_manager/releases"
 
 
 @onready var http_request: HTTPRequest = $HTTPRequest
