@@ -61,10 +61,10 @@ Returns the example balloon's base CanvasLayer in case you want to `queue_free()
 
 ### Exports
 
-- `skip_action: StringName = &"ui_cancel"` - the action to press to skip typing, if any.
 - `seconds_per_step: float = 0.02` - the speed with which the text types out.
 - `pause_at_characters: String = ".?!"` - automatically have a brief pause when these characters are encountered.
 - `skip_pause_at_character_if_followed_by: String = ")\""` - ignore automatic pausing if the pause character is followed by one of these.
+- `skip_pause_at_abbreviations: Array = ["Mr", "Mrs", "Ms", "Dr", "etc", "ex"] - Don't auto pause after these abbreviations (only if "." is in `pause_at_characters`).
 - `seconds_per_pause_step: float = 0.3` - the amount of time to pause when exposing a character present in pause_at_characters.
 
 ### Signals
@@ -82,5 +82,4 @@ Starts typing out the text of the label.
 
 #### `func skip_typing() -> void`
 
-Stop typing out the text and jump right to the end.
-Automatically called when skip_action is pressed.
+Stop typing out the text and jump right to the end. This will emit `skipped_typing`.
